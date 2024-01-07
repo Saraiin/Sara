@@ -477,7 +477,7 @@ nav .fas {
         }
     
         nav ul {
-            background: #b54768;
+            background: rgba(255, 192, 203, 0.5);
             position: fixed;
             top: 0;
             width: 50%;
