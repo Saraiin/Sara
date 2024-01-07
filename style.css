@@ -446,46 +446,55 @@ nav .fas {
         background-image: url(images/bg3.jpg);
     }
 
+    
+    #header {
+        position: relative;
+    }
+    
     .header-text {
-        margin-top: 100%;
-        font-size: 16px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: left;
+        width: 100%;
+        margin-left: 50px;
+        margin-bottom: 40px;
     }
-
-    .header-text h1 {
-        font-size: 30px;
+    
+        .header-text h1 {
+            font-size: 30px;
+        }
+    
+        /* Show the navigation menu on small screens */
+        nav ul {
+            display: none;
+        }
+    
+        nav .fas {
+            display: block;
+            font-size: 25px;
+        }
+    
+        nav ul {
+            background: #b54768;
+            position: fixed;
+            top: 0;
+            width: 50%;
+            height: 100vh;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        nav ul.show {
+            transform: translateY(0);
+        }
+    
+        nav ul li {
+            margin: 25px;
+        }
     }
-
-    /* Show the navigation menu on small screens */
-    nav ul {
-        display: none;
-    }
-
-    nav .fas {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #b54768;
-        position: fixed;
-        top: 0;
-        width: 200px;
-        /* Increased the width to accommodate the menu items */
-        right: 0;
-        height: 100vh;
-        padding-top: 50px;
-        transform: translateX(200px);
-        /* Off-canvas menu, initially hidden */
-        transition: transform 0.3s ease-in-out;
-    }
-
-    nav ul.show {
-        transform: translateX(0);
-        /* Show the menu when 'show' class is applied */
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-}
